@@ -17,7 +17,7 @@ const AddTodo = ({ dispatch }) => {
       }}>
         <input ref={node => input = node} />
         <button type="submit">
-          Add Todo
+          {process.env.REACT_APP_ADD_TODO_TEXT}
         </button>
       </form>
     </div>

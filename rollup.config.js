@@ -10,13 +10,12 @@ import { uglify } from "rollup-plugin-uglify";
 
 export default {
   input: 'src/index.js',
-  output: [
-    {
-      file: 'dist/index.js',
-      format: 'umd',
-      sourcemap: 'inline',
-    },
-  ],
+  output: {
+    file: 'dist/index.js',
+    format: 'iife',
+    banner: '(function(AUTOMAT_OPTIONS) {',
+    footer: '})(AUTOMAT_OPTIONS)',
+  },
   plugins: [
     progress(),
     nodeResolve({
@@ -25,6 +24,7 @@ export default {
     json(),
     replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.REACT_APP_ADD_TODO_TEXT': 'AUTOMAT_OPTIONS.ADD_TODO_TEXT',
     }),
     commonjs({
       include: [
