@@ -1,5 +1,5 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'preact-compat'
+import { connect } from 'preact-redux'
 import { addTodo } from '../actions'
 
 const AddTodo = ({ dispatch }) => {

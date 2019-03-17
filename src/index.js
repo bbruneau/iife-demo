@@ -1,7 +1,6 @@
-import React from 'react'
-import { render } from 'react-dom'
+import React, { render } from 'preact-compat'
 import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+import { Provider } from 'preact-redux'
 import App from './components/App'
 import rootReducer from './reducers'
 
