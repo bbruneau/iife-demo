@@ -8,13 +8,13 @@
     <div id="root"></div>
     <script type="text/javascript">
       (function(A,u,t,o,m,a,T) {
-        u = A.createElement('script');
-        u.src = './index.js';
-        u.type = 'text/javascript';
-        t = A.getElementById('root');
-        o = t.parentNode;
-        o.insertBefore(u,t)
-      }(document))
+        t = A.createElement('script');
+        t.src = u;
+        t.type = 'text/javascript';
+        o = A.getElementById('root');
+        m = o.parentNode;
+        m.insertBefore(t,o)
+      }(document, './index.js'))
 
       var AUTOMAT_OPTIONS = {
         ADD_TODO_TEXT: 'Add Todo'
