@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>e2e test</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      (function(A,u,t,o,m,a,T) {
+        u = A.createElement('script');
+        u.src = './index.js';
+        u.type = 'text/javascript';
+        t = A.getElementById('root');
+        o = t.parentNode;
+        o.insertBefore(u,t)
+      }(document))
+
+      var AUTOMAT_OPTIONS = {
+        ADD_TODO_TEXT: 'Add Todo'
+      }
+    </script>
+  </body>
+</html>
