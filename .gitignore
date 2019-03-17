@@ -5,6 +5,13 @@ node_modules
 
 # production
 build
+dist
+
+# rollup
+stats.html
+
+# logs
+*.log
 
 # misc
 .DS_Store
